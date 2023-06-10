@@ -11,8 +11,11 @@
 <div class="container p-5 mx-3 my-3">
   <h3>Bookmarks</h3>
   <% @list.movies.each do |movie| %>
-    <p><%= movie.title %></p>
-    <p><%= movie.overview %></p>
+    <div class="card col-6 rounded shadow p-3 mx-5 my-3">
+      <p><%= movie.title %></p>
+      <p><%= movie.rating %></p>
+      <p><%= movie.poster_url %>
+    </div>
   <% end %>
   <div class="container p-1 mx-1 my-1">
     <p>

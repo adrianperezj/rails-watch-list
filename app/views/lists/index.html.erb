@@ -1,15 +1,20 @@
 <div class="container p-5 mx-3 my-3">
   <h1>Movie Lists</h1>
   <div class="container p-1 mx-1 my-1">
-    <%= link_to "New List", new_path, class: 'btn btn-primary' %>
+    <%= link_to "New List", new_list_path, class: 'btn btn-primary' %>
   </div>
 </div>
 
-<div class="container p-5 mx-3 my-3">
-  <div class="container">
+<div class="container p-5 mx-3 my-1">
+  <div class="justify-content-center">
     <% @lists.each do |list| %>
-      <div class="card col-8">
-        <p><%=  render list %></p>
+      <div class="row">
+        <div class="card col-md-6 rounded shadow p-3 mx-2 my-2">
+          <p><%=  render list %></p>
+          <div class="button">
+            <%= link_to "See more", list_path(list), class: 'btn btn-secondary mx-2 my-2' %>
+          </div>
+        </div>
       </div>
     <% end %>
   </div>
