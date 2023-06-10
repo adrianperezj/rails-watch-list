@@ -1,0 +1,13 @@
+<div class="container p-5 mx-3 my-3">
+  <h1>Movies</h1>
+</div>
+
+<div class="container p-5 mx-3 my-3">
+  <div class="container">
+    <%=@movies.each do |movie| %>
+      <div class="card col-8">
+        <p><%=  render movie %></p>
+      </div>
+    <% end %>
+  </div>
+</div>

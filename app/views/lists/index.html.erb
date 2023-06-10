@@ -1,0 +1,16 @@
+<div class="container p-5 mx-3 my-3">
+  <h1>Movie Lists</h1>
+  <div class="container p-1 mx-1 my-1">
+    <%= link_to "New List", new_path, class: 'btn btn-primary' %>
+  </div>
+</div>
+
+<div class="container p-5 mx-3 my-3">
+  <div class="container">
+    <% @lists.each do |list| %>
+      <div class="card col-8">
+        <p><%=  render list %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
