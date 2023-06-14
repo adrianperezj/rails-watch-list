@@ -1,0 +1,12 @@
+.card-category {
+  height: 500px;
+  width: fit-content;
+  margin: 0 auto;
+  background-size: cover;
+  align-items: center;
+  display: flex;
+
+  .p {
+    text-shadow: 2px 2px 4px #000000;
+  }
+}
