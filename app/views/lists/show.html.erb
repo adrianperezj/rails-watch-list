@@ -1,25 +1,28 @@
-<div class="container p-5 mx-3 my-3">
-  <h1>Movie List: <%= @list.name %></h1>
-</div>
-
-<div class="container p-3 mx-5 my-3">
-  <div id="resaurant p-3 mx-5 my-3">
-    <%= render @list %>
+<div class="container">
+  <div class="container p-5 mx-3 my-3">
+    <h1>Movie List: <%= @list.name %></h1>
+    <%= link_to "Back to lists", root_path, class:"btn btn-secondary" %>
   </div>
-</div>
 
-<div class="container p-5 mx-3 my-3">
-  <h3>Bookmarks</h3>
-  <% @list.movies.each do |movie| %>
-    <div class="card col-6 rounded shadow p-3 mx-5 my-3">
-      <p><%= movie.title %></p>
-      <p><%= movie.rating %></p>
-      <p><%= movie.poster_url %>
+  <div class="container p-3 mx-5 my-3">
+    <div id="card p-3 mx-5 my-3">
+      <%= render @list %>
     </div>
-  <% end %>
-  <div class="container p-1 mx-1 my-1">
-    <p>
-      <%= render "bookmarks/form", list: @list, bookmark: @bookmark %>
-    </p>
+  </div>
+
+  <div class="container p-5 mx-3 my-3">
+    <h3>Bookmarks</h3>
+    <% @list.movies.each do |movie| %>
+      <div class="card col-6 rounded shadow p-3 mx-5 my-3">
+        <p><%= movie.title %></p>
+        <p><%= movie.rating %></p>
+        <p><%= movie.poster_url %>
+      </div>
+    <% end %>
+    <div class="container p-1 mx-1 my-1">
+      <p>
+        <%= render "bookmarks/form", list: @list, bookmark: @bookmark %>
+      </p>
+    </div>
   </div>
 </div>
